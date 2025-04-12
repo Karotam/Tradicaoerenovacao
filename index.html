@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapa Tradição e Renovação</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .parallax {
+            background-image: url('logo.png');
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            filter: grayscale(0.7);
+            
+        }
+        
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            filter: grayscale(0);
+        }
+        
+        .rounded-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-candidate {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card-candidate:hover {
+            transform: translateY(-10px);
+        }
+        
+        footer {
+            background-color: #21502b;
+            color: white;
+            padding: 2rem 0;
+        }
+        .navbar{
+            background-color: #2c2961;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="logo.png" height="100px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#propostas">Propostas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#candidatos">Candidatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Parallax com texto e botão -->
+    <div class="parallax">
+        <div class="parallax-content">
+            <img src="logo.png" height="300px">
+            <h1>Chapa Tradição e Renovação - Transformação e Resultados</h1>
+            <p class="lead">Uma equipe comprometida com o futuro e preparada para os desafios que virão.</p>
+            <a href="#propostas" class="btn btn-primary btn-lg mt-3">Conheça nossas propostas</a>
+        </div>
+    </div>
+
+    <!-- Seção de Propostas -->
+    <div id="propostas" class="container py-5">
+        <h2 class="text-center mb-5">Nossas Propostas</h2>
+        
+        <div class="accordion" id="accordionPropostas">
+            <!-- Proposta 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#proposta1">
+                        <strong>Transparência e Comunicação</strong>
+                    </button>
+                </h2>
+                <div id="proposta1" class="accordion-collapse collapse show" data-bs-parent="#accordionPropostas">
+                    <div class="accordion-body">
+                        <p>Implementaremos canais de comunicação direta com todos os membros, com relatórios mensais detalhados sobre as atividades e decisões tomadas.</p>
+                        <ul>
+                            <li>Reuniões abertas mensais</li>
+                            <li>Portal online com todas as informações</li>
+                            <li>Enquetes para decisões importantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proposta 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proposta2">
+                        <strong>Inovação e Modernização</strong>
+                    </button>
+                </h2>
+                <div id="proposta2" class="accordion-collapse collapse" data-bs-parent="#accordionPropostas">
+                    <div class="accordion-body">
+                        <p>Buscaremos modernizar nossos processos e implementar novas tecnologias para melhorar a eficiência e a participação de todos.</p>
+                        <ul>
+                            <li>Digitalização de processos burocráticos</li>
+                            <li>Plataforma de colaboração online</li>
+                            <li>Capacitação tecnológica para membros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proposta 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proposta3">
+                        <strong>Integração e Representatividade</strong>
+                    </button>
+                </h2>
+                <div id="proposta3" class="accordion-collapse collapse" data-bs-parent="#accordionPropostas">
+                    <div class="accordion-body">
+                        <p>Garantiremos que todas as vozes sejam ouvidas e representadas, promovendo a diversidade e a inclusão em nossas ações.</p>
+                        <ul>
+                            <li>Comitês representativos de todos os setores</li>
+                            <li>Programas de integração entre membros</li>
+                            <li>Eventos multiculturais e inclusivos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Candidatos -->
+    <div id="candidatos" class="container py-5 bg-light">
+        <h2 class="text-center mb-5">Nossos Candidatos</h2>
+        
+        <div class="row">
+            <!-- Candidato 1 -->
+            <div class="col-md-4">
+                <div class="card card-candidate text-center p-4 ">
+                    <img src="https://source.unsplash.com/random/300x300/?portrait,person,1" alt="Candidato 1" class="rounded-img mx-auto mb-3 ">
+                    <h3>João Silva</h3>
+                    <p class="text-muted">Presidente</p>
+                    <p>Engenheiro com 10 anos de experiência em liderança de equipes e projetos inovadores.</p>
+                </div>
+            </div>
+            
+            <!-- Candidato 2 -->
+            <div class="col-md-4">
+                <div class="card card-candidate text-center p-4">
+                    <img src="https://source.unsplash.com/random/300x300/?portrait,person,2" alt="Candidata 2" class="rounded-img mx-auto mb-3">
+                    <h3>Maria Souza</h3>
+                    <p class="text-muted">Vice-Presidente</p>
+                    <p>Administradora especializada em gestão participativa e comunicação organizacional.</p>
+                </div>
+            </div>
+            
+            <!-- Candidato 3 -->
+            <div class="col-md-4">
+                <div class="card card-candidate text-center p-4">
+                    <img src="https://source.unsplash.com/random/300x300/?portrait,person,3" alt="Candidato 3" class="rounded-img mx-auto mb-3">
+                    <h3>Carlos Oliveira</h3>
+                    <p class="text-muted">Tesoureiro</p>
+                    <p>Economista com ampla experiência em gestão financeira e transparência contábil.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé com contatos -->
+    <footer id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Entre em Contato</h3>
+                    <p>Tem dúvidas ou sugestões? Fale conosco!</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> contato@chapaTradiçãoeRenovação.com.br</li>
+                        <li><i class="fas fa-phone me-2"></i> (11) 98765-4321</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Rua Exemplo, 123 - Centro, Cidade/SP</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Redes Sociais</h3>
+                    <p>Acompanhe nossas atividades e novidades:</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; Chapa 2025-2027 Chapa Tradição e Renovação - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
